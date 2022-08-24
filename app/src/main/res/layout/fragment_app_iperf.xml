@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    tools:context=".UI.FragmentAppIperf">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/iperf_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#FDF1CD"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5">
+
+        <Button
+            android:id="@+id/edit_iperf_bt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@color/colorGold"
+            android:drawableStart="@drawable/ic_edit_maroon_24dp"
+            android:paddingStart="5dp"
+            android:text="Edit"
+            android:textColor="@color/colorMaroon"
+            app:layout_constraintDimensionRatio="7:1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/run_label_title_tv"
+            app:layout_constraintWidth_percent="0.5"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/hostname_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/bg_light_gold_cell_shape"
+            android:gravity="top"
+            android:text=" Hostname:"
+            android:typeface="monospace"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/hostname_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/bg_light_gold_cell_shape"
+            android:gravity="center"
+            android:text="AZURE1"
+            android:textColor="@color/black"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="@id/hostname_title_tv"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintLeft_toRightOf="@id/hostname_title_tv"
+            app:layout_constraintTop_toTopOf="@id/hostname_title_tv"
+            app:layout_constraintWidth_percent="0.25"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/iperf_interval_title_tv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text="-i"
+            android:typeface="monospace"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hostname_title_tv"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/iperf_interval_tv"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:autoSizeTextType="uniform"
+
+            android:text="1"
+            android:textColor="@color/black"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="@id/iperf_interval_title_tv"
+            app:layout_constraintLeft_toRightOf="@id/iperf_interval_title_tv"
+            app:layout_constraintTop_toTopOf="@id/iperf_interval_title_tv"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/port_title_tv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text="-p"
+            android:typeface="monospace"
+            app:layout_constraintLeft_toRightOf="@id/iperf_interval_tv"
+            app:layout_constraintTop_toBottomOf="@id/hostname_tv"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/port_tv"
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="5201"
+            android:textColor="@color/black"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="@id/port_title_tv"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintLeft_toRightOf="@id/port_title_tv"
+            app:layout_constraintTop_toTopOf="@id/port_title_tv"
+            app:layout_constraintWidth_percent="0.25"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/duration_title_tv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:autoSizeMinTextSize="8sp"
+            android:autoSizeMaxTextSize="14sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="-t"
+            android:typeface="monospace"
+            app:layout_constraintLeft_toRightOf="@id/port_tv"
+            app:layout_constraintTop_toBottomOf="@id/hostname_tv"/>
+
+        <TextView
+            android:id="@+id/duration_tv"
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:autoSizeMinTextSize="8sp"
+            android:autoSizeMaxTextSize="14sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="left|center_vertical"
+            android:includeFontPadding="false"
+            android:text="1800"
+            android:textColor="@color/black"
+
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="@id/duration_title_tv"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintLeft_toRightOf="@id/duration_title_tv"
+            app:layout_constraintTop_toTopOf="@id/duration_title_tv"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <TextView
+            android:id="@+id/reverse_title_tv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:autoSizeMinTextSize="8sp"
+            android:autoSizeMaxTextSize="14sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="-R"
+            android:typeface="monospace"
+            app:layout_constraintLeft_toRightOf="@id/duration_tv"
+            app:layout_constraintTop_toBottomOf="@id/hostname_tv"/>
+
+
+
+        <TextView
+            android:id="@+id/tcpdump_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/bg_light_gold_cell_shape"
+            android:text=" TCPDUMP: "
+            android:typeface="monospace"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reverse_title_tv"
+            app:layout_constraintWidth_percent="0.25"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tcpdump_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text="Yes"
+            android:textColor="@color/black"
+            android:typeface="monospace"
+            android:background="@drawable/bg_light_gold_cell_shape"
+            app:layout_constraintBottom_toBottomOf="@id/tcpdump_title_tv"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintLeft_toRightOf="@id/tcpdump_title_tv"
+            app:layout_constraintTop_toTopOf="@id/tcpdump_title_tv"
+            app:layout_constraintWidth_percent="0.25"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/run_label_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/bg_light_gold_cell_shape"
+            android:includeFontPadding="false"
+            android:text=" Run Label: "
+            android:typeface="monospace"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tcpdump_title_tv"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <TextView
+            android:id="@+id/run_label_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/bg_light_gold_cell_shape"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="9999"
+            android:textColor="@color/black"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="@id/run_label_title_tv"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintLeft_toRightOf="@id/run_label_title_tv"
+            app:layout_constraintTop_toTopOf="@id/run_label_title_tv"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <TextView
+            android:id="@+id/tcp_udp_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text=""
+            android:typeface="monospace"
+            app:layout_constraintDimensionRatio="5:1"
+            app:layout_constraintLeft_toRightOf="@id/hostname_tv"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <TextView
+            android:id="@+id/tcp_udp_setting_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/tcp_udp_tv"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintLeft_toRightOf="@id/tcp_udp_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25" />
+
+
+        <TextView
+            android:id="@+id/run_number_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:includeFontPadding="false"
+            android:text="Run Number: "
+            android:typeface="monospace"
+            app:layout_constraintDimensionRatio="5:1"
+            app:layout_constraintLeft_toRightOf="@id/hostname_tv"
+            app:layout_constraintTop_toBottomOf="@id/tcp_udp_tv"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <TextView
+            android:id="@+id/run_number_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/run_number_title_tv"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintLeft_toRightOf="@id/run_number_title_tv"
+            app:layout_constraintTop_toTopOf="@id/run_number_title_tv"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <ToggleButton
+            android:id="@+id/toggleButtonIperf"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorGold"
+            android:enabled="false"
+            android:gravity="center"
+            android:textColor="@color/colorGoldDisabled"
+            android:textOff="Run Iperf"
+            android:textOn="Stop Iperf"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintLeft_toRightOf="@id/port_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/run_number_tv"
+            app:layout_constraintWidth_percent="0.2" />
+
+      <TextView
+            android:id="@+id/iperfapp_elapsed_time_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:includeFontPadding="false"
+            android:text="Time Elapsed: "
+            android:typeface="monospace"
+            app:layout_constraintDimensionRatio="5:1"
+            app:layout_constraintLeft_toRightOf="@id/hostname_tv"
+            app:layout_constraintTop_toBottomOf="@id/toggleButtonIperf"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <TextView
+            android:id="@+id/iperfapp_elapsed_time"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:includeFontPadding="false"
+            android:text="-"
+            android:textAlignment="center"
+            android:typeface="monospace"
+            app:layout_constraintDimensionRatio="5:1"
+            app:layout_constraintLeft_toRightOf="@id/iperfapp_elapsed_time_tv"
+            app:layout_constraintTop_toBottomOf="@id/toggleButtonIperf"
+            app:layout_constraintWidth_percent="0.25" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

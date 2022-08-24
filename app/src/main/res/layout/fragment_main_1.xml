@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UI.FragmentMain1"
+    android:layout_marginTop="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/ping_5g_title_layout"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/cell_shape"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/time_elapse_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintDimensionRatio="2:1"
+        android:paddingTop="4dp"
+        android:paddingLeft="5dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/pie_chart"
+            android:id="@+id/g5g_icon"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_percent="0.15"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/ping_5g_tv"/>
+
+        <TextView
+            android:id="@+id/ping_5g_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" % of 5G time"
+            android:textAllCaps="true"
+            android:autoSizeTextType="uniform"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/percentage_5g_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="-"
+            android:ems="4"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ping_5g_tv"
+            app:layout_constraintWidth_percent="0.7" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/time_elapse_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/cell_shape"
+        app:layout_constraintLeft_toRightOf="@id/ping_5g_title_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingTop="4dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintDimensionRatio="3:1">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/clock"
+            android:id="@+id/time_icon"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_percent="0.15"
+            app:layout_constraintRight_toLeftOf="@id/time_title_tv"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_title_tv"
+            android:text=" Elapsed Time"
+            android:textAllCaps="true"
+            android:autoSizeTextType="uniform"
+            android:typeface="monospace"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <Chronometer
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/TimerChronometer"
+            android:textColor="@android:color/black"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/time_title_tv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_percent="0.7"
+            app:layout_constraintDimensionRatio="3.5:1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/tower_info_layout"
+        android:background="@drawable/cell_shape"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintTop_toBottomOf="@id/ping_5g_title_layout"
+        app:layout_constraintDimensionRatio="2.5:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/tower_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/wifi_signal_tower"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.74"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tower_title_tv"
+            android:text="Tower info"
+            android:textAllCaps="true"
+            android:autoSizeTextType="uniform"
+            android:typeface="monospace"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tower_id_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dash_line"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@id/tower_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tower_title_tv"
+            app:layout_constraintWidth_percent="0.8">
+
+            <TextView
+                android:id="@+id/tower_id_tv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+                android:text="ID: "
+                android:textAllCaps="true"
+                android:typeface="monospace"
+                android:gravity="top"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1.5:1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:id="@+id/cur_tower_tv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:text="-"
+                android:textColor="@android:color/black"
+                app:layout_constraintDimensionRatio="6:1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@id/tower_id_tv"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tower_id_tv"
+                app:layout_constraintWidth_percent="0.7"
+                app:layout_constraintBottom_toBottomOf="@id/tower_id_tv"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tower_num_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tower_id_layout"
+            app:layout_constraintLeft_toRightOf="@id/tower_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/dash_line_bottom">
+
+            <TextView
+                android:id="@+id/tower_num_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:paddingLeft="5dp"
+                android:text="# of Towers:"
+                android:textAllCaps="true"
+                android:typeface="monospace"
+                app:layout_constraintBottom_toBottomOf="@id/tower_num_tv"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tower_num_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tower_num_tv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="-"
+                android:textColor="@android:color/black"
+                android:includeFontPadding="false"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintDimensionRatio="3:1"
+                app:layout_constraintHorizontal_bias="1.0"
+                android:paddingLeft="5dp"
+                app:layout_constraintLeft_toRightOf="@id/tower_num_title_tv"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tower_num_title_tv"
+                app:layout_constraintBottom_toBottomOf="@id/tower_num_title_tv"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/vh_num_title"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:includeFontPadding="false"
+            android:paddingLeft="5dp"
+            android:paddingBottom="0dp"
+            android:text="VH:"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/tower_num_layout"
+            app:layout_constraintTop_toBottomOf="@id/tower_num_layout"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/vertical_handoff_tv"
+            android:text="-"
+            android:textColor="@android:color/black"
+            android:autoSizeTextType="uniform"
+            android:includeFontPadding="false"
+            android:paddingBottom="1dp"
+            app:layout_constraintLeft_toRightOf="@id/vh_num_title"
+            app:layout_constraintRight_toLeftOf="@id/HH_title"
+            app:layout_constraintTop_toTopOf="@id/vh_num_title"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintDimensionRatio="3:1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/HH_title"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="HH:"
+            android:includeFontPadding="false"
+            android:autoSizeTextType="uniform"
+            android:typeface="monospace"
+            android:paddingBottom="0dp"
+            app:layout_constraintLeft_toRightOf="@id/vertical_handoff_tv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/vh_num_title"/>
+
+        <TextView
+            android:id="@+id/horizontal_handoff_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="-"
+            android:textColor="@android:color/black"
+            android:autoSizeTextType="uniform"
+            android:includeFontPadding="false"
+            android:paddingBottom="0dp"
+            app:layout_constraintLeft_toRightOf="@id/HH_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/vh_num_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/cell_shape"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintLeft_toRightOf="@id/tower_info_layout"
+        app:layout_constraintTop_toBottomOf="@id/time_elapse_layout"
+        app:layout_constraintBottom_toBottomOf="@id/tower_info_layout"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/signal"
+            app:layout_constraintRight_toLeftOf="@id/signal_title_tv"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_percent="0.1"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/signal_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:typeface="monospace"
+            android:text=" signal strength"
+            android:textAllCaps="true"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/g4g_signal_tv"
+            android:layout_width="77dp"
+            android:layout_height="38dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/dash_line_bottom"
+            android:includeFontPadding="false"
+            android:text="4G"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toTopOf="@id/g5g_signal_tv"
+            app:layout_constraintDimensionRatio="3:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signal_title_tv"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <TextView
+            android:id="@+id/g4g_strength_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/dash_line_bottom"
+            android:gravity="bottom"
+            android:text="-"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/g4g_signal_tv"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toRightOf="@id/g4g_signal_tv"
+            app:layout_constraintRight_toLeftOf="@id/g4g_unit_tv"
+            app:layout_constraintTop_toTopOf="@id/g4g_signal_tv"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/g4g_unit_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/dash_line_bottom"
+            android:gravity="bottom"
+            android:text="dB"
+            android:typeface="monospace"
+            android:paddingBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/g4g_signal_tv"
+            app:layout_constraintLeft_toRightOf="@id/g4g_strength_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/g4g_signal_tv"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintWidth_percent="0.1" />
+
+        <TextView
+            android:id="@+id/g5g_signal_tv"
+            android:layout_width="77dp"
+            android:layout_height="41dp"
+            android:autoSizeTextType="uniform"
+            android:includeFontPadding="false"
+            android:text="5G"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="3:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/g4g_signal_tv"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <TextView
+            android:id="@+id/ssrsrp_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="bottom"
+            android:text="-"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/g5g_signal_tv"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toRightOf="@id/g5g_signal_tv"
+            app:layout_constraintRight_toLeftOf="@id/g5g_unit_tv"
+            app:layout_constraintTop_toTopOf="@id/g5g_signal_tv"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/g5g_unit_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="bottom"
+            android:paddingBottom="2dp"
+            android:text="dB"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="@id/g5g_signal_tv"
+            app:layout_constraintLeft_toRightOf="@id/ssrsrp_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ssrsrp_tv"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintWidth_percent="0.1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

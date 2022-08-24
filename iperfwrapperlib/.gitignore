@@ -1,0 +1,3 @@
+/build
+/.externalNativeBuild/cmake/
+/iperf/src/.deps/

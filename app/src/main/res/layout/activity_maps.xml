@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mapLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/blue"
+            android:id="@+id/toolbar"
+            app:titleTextColor="@android:color/black"
+            app:navigationContentDescription="@string/google_app_id"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:elevation="4dp"/>
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_anchor="@id/toolbar"
+            app:layout_anchorGravity="center" />
+
+        <ImageButton
+            android:id="@+id/re_center_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:background="#99FFFFFF"
+            android:padding="5dp"
+            android:src="@drawable/ic_my_location_black_24dp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize">
+            <FrameLayout
+                android:id="@+id/mobility_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#99FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintWidth_percent="0.06">
+                <ImageView
+                    android:id="@+id/bike_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bike"
+                    android:visibility="invisible" />
+                <ImageView
+                    android:id="@+id/car_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/car"
+                    android:visibility="invisible" />
+                <ImageView
+                    android:id="@+id/run_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/run"
+                    android:visibility="invisible" />
+                <ImageView
+                    android:id="@+id/standing_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/standing"
+                    android:visibility="invisible" />
+                <ImageView
+                    android:id="@+id/walk_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/walk"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#99FFFFFF"
+                app:layout_constraintDimensionRatio="2:1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mobility_layout"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintWidth_percent="0.12">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:autoSizeTextType="uniform"
+                    android:includeFontPadding="false"
+                    android:text="M: "
+                    android:textColor="@android:color/black" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/bike_m"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bike"
+                        android:visibility="invisible" />
+                    <ImageView
+                        android:id="@+id/car_m"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/car"
+                        android:visibility="invisible" />
+                    <ImageView
+                        android:id="@+id/run_m"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/run"
+                        android:visibility="invisible" />
+                    <ImageView
+                        android:id="@+id/stand_m"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/standing"
+                        android:visibility="invisible" />
+                    <ImageView
+                        android:id="@+id/walk_m"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/walk"
+                        android:visibility="invisible" />
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@id/bottom_sheet"
+            android:layout_gravity="right"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp">
+            <ImageView
+                android:id="@+id/speed_iv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/speed_bgl"
+                app:layout_constraintWidth_percent="0.15"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                android:id="@+id/mobility_speed_tv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:text="-"
+                android:textColor="@color/black"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="@id/speed_iv"
+                app:layout_constraintDimensionRatio="1.2:1"
+                app:layout_constraintLeft_toLeftOf="@id/speed_iv"
+                app:layout_constraintRight_toRightOf="@id/speed_iv"
+                app:layout_constraintTop_toTopOf="@id/speed_iv"
+                app:layout_constraintVertical_bias="0.4"
+                app:layout_constraintWidth_percent="0.08" />
+            <TextView
+                android:id="@+id/speed_unit_iv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="mph"
+                android:autoSizeTextType="uniform"
+                android:gravity="top|center"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/mobility_speed_tv"
+                app:layout_constraintLeft_toLeftOf="@id/speed_iv"
+                app:layout_constraintRight_toRightOf="@id/speed_iv"
+                app:layout_constraintWidth_percent="0.08"
+                app:layout_constraintDimensionRatio="1.5:1"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@id/bottom_sheet"
+            android:layout_gravity="right"
+            android:paddingRight="10dp"
+            android:paddingBottom="3dp">
+            <ImageView
+                android:id="@+id/compass_iv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/compass_bg"
+                app:layout_constraintWidth_percent="0.17"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                android:id="@+id/cur_mobility_orientation_tv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center_horizontal"
+                android:includeFontPadding="false"
+                android:text="-"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/compass_iv"
+                app:layout_constraintDimensionRatio="1.2:1"
+                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintLeft_toLeftOf="@id/compass_iv"
+                app:layout_constraintRight_toRightOf="@id/compass_iv"
+                app:layout_constraintTop_toTopOf="@id/compass_iv"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintWidth_percent="0.08" />
+            <TextView
+                android:id="@+id/orientation_unit_tv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="&#xb0;"
+                android:autoSizeTextType="uniform"
+                android:gravity="left"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toTopOf="@id/cur_mobility_orientation_tv"
+                app:layout_constraintLeft_toRightOf="@id/cur_mobility_orientation_tv"
+                app:layout_constraintWidth_percent="0.06"
+                app:layout_constraintDimensionRatio="1.5:1"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:background="@color/blue"
+            app:layout_behavior="com.example.mmwavetracker.UI.WABottomSheetBehavior"
+            app:behavior_hideable="false"
+            android:fillViewport="true"
+            app:behavior_peekHeight="240dp"
+            android:orientation="vertical">
+            <com.example.mmwavetracker.UI.WrapContentViewPager
+                android:id="@+id/bottom_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

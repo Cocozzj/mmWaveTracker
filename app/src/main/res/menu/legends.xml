@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/edit_tracer"
+        android:title=""
+        android:icon="@drawable/ic_edit_white_24dp"
+        app:showAsAction="always" />
+    <item android:id="@+id/legend_tool"
+        android:title=""
+        android:icon="@drawable/ic_info_outline_black_24dp"
+        app:showAsAction="always">
+        <menu>
+        <item
+            android:id="@+id/legend_1"
+            android:title=""
+            android:icon="@drawable/map_legend"/>
+        </menu>
+    </item>
+    <item android:id="@+id/play_and_pause"
+        android:title=""
+        android:icon="@drawable/play"
+        app:showAsAction="always" />
+
+</menu>

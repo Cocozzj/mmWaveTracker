@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".UI.FragmentMain2">
+
+    <TextView
+        android:id="@+id/session_id"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=" Session ID "
+        android:background="@drawable/cell_shape"
+        android:autoSizeTextType="uniform"
+        android:typeface="monospace"
+        android:gravity="center"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintDimensionRatio="10:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/session_id_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-"
+        android:includeFontPadding="false"
+        android:background="@drawable/cell_shape"
+        android:autoSizeTextType="uniform"
+        android:typeface="monospace"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@id/session_id"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/session_id"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/distance_title"
+        android:text="Distance"
+        android:background="@drawable/cell_shape"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:typeface="monospace"
+        app:layout_constraintTop_toBottomOf="@id/session_id"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintDimensionRatio="10:1" />
+
+    <TextView
+        android:id="@+id/distance_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:background="@drawable/cell_shape"
+        app:layout_constraintLeft_toRightOf="@id/distance_title"
+        app:layout_constraintTop_toBottomOf="@id/session_id_tv"
+        app:layout_constraintBottom_toBottomOf="@id/distance_title"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/fivedNSAType"
+        android:text="is5GNSA"
+        android:background="@drawable/cell_shape"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:typeface="monospace"
+        app:layout_constraintTop_toBottomOf="@id/distance_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintDimensionRatio="10:1" />
+
+    <TextView
+        android:id="@+id/fivedNSAType_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:background="@drawable/cell_shape"
+        app:layout_constraintLeft_toRightOf="@id/fivedNSAType"
+        app:layout_constraintTop_toBottomOf="@id/distance_tv"
+        app:layout_constraintBottom_toBottomOf="@id/fivedNSAType"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/fivedSAType"
+        android:text="is5GSA"
+        android:background="@drawable/cell_shape"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:typeface="monospace"
+        app:layout_constraintTop_toBottomOf="@id/fivedNSAType"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintDimensionRatio="10:1" />
+
+    <TextView
+        android:id="@+id/fivedSAType_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:background="@drawable/cell_shape"
+        app:layout_constraintLeft_toRightOf="@id/fivedSAType"
+        app:layout_constraintTop_toBottomOf="@id/fivedNSAType"
+        app:layout_constraintBottom_toBottomOf="@id/fivedSAType"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/ConnectType"
+        android:text="LTE/NR"
+        android:background="@drawable/cell_shape"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:typeface="monospace"
+        app:layout_constraintTop_toBottomOf="@id/fivedSAType"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintDimensionRatio="10:1" />
+
+    <TextView
+        android:id="@+id/ConnectType_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:background="@drawable/cell_shape"
+        app:layout_constraintLeft_toRightOf="@id/ConnectType"
+        app:layout_constraintTop_toBottomOf="@id/fivedSAType"
+        app:layout_constraintBottom_toBottomOf="@id/ConnectType"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/NetworkType"
+        android:text="NetworkType"
+        android:background="@drawable/cell_shape"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:typeface="monospace"
+        app:layout_constraintTop_toBottomOf="@id/ConnectType"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintDimensionRatio="10:1" />
+
+    <TextView
+        android:id="@+id/NetworkType_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:background="@drawable/cell_shape"
+        app:layout_constraintLeft_toRightOf="@id/NetworkType"
+        app:layout_constraintTop_toBottomOf="@id/ConnectType"
+        app:layout_constraintBottom_toBottomOf="@id/NetworkType"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/lteCi"
+        android:text="LteCi"
+        android:background="@drawable/cell_shape"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:typeface="monospace"
+        app:layout_constraintTop_toBottomOf="@id/NetworkType"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintDimensionRatio="10:1" />
+
+    <TextView
+        android:id="@+id/lteCi_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:background="@drawable/cell_shape"
+        app:layout_constraintLeft_toRightOf="@id/lteCi"
+        app:layout_constraintTop_toBottomOf="@id/NetworkType_tv"
+        app:layout_constraintBottom_toBottomOf="@id/lteCi"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/ltePci"
+        android:text="LtePci"
+        android:background="@drawable/cell_shape"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:typeface="monospace"
+        app:layout_constraintTop_toBottomOf="@id/lteCi"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintDimensionRatio="10:1" />
+
+    <TextView
+        android:id="@+id/ltePci_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:background="@drawable/cell_shape"
+        app:layout_constraintLeft_toRightOf="@id/ltePci"
+        app:layout_constraintTop_toBottomOf="@id/lteCi_tv"
+        app:layout_constraintBottom_toBottomOf="@id/ltePci"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/nrCi"
+        android:text="NrCi"
+        android:background="@drawable/cell_shape"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:typeface="monospace"
+        app:layout_constraintTop_toBottomOf="@id/ltePci"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintDimensionRatio="10:1" />
+
+    <TextView
+        android:id="@+id/nrCi_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:background="@drawable/cell_shape"
+        app:layout_constraintLeft_toRightOf="@id/nrCi"
+        app:layout_constraintTop_toBottomOf="@id/ltePci_tv"
+        app:layout_constraintBottom_toBottomOf="@id/nrCi"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/nrPci"
+        android:text="NrPci"
+        android:background="@drawable/cell_shape"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:typeface="monospace"
+        app:layout_constraintTop_toBottomOf="@id/nrCi"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintDimensionRatio="10:1" />
+
+    <TextView
+        android:id="@+id/nrPci_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:background="@drawable/cell_shape"
+        app:layout_constraintLeft_toRightOf="@id/nrPci"
+        app:layout_constraintTop_toBottomOf="@id/nrCi_tv"
+        app:layout_constraintBottom_toBottomOf="@id/nrPci"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

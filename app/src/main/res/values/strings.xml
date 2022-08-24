@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">mmWaveCapture</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="perm_continue">Continue</string>
+    <string name="perm_text">Please grant all permissions before continue</string>
+    <string name="google_api" translatable="false" templateMergeStrategy="preserve" >AIzaSyDkqbJm9p1nFSKTA2DmSqHX_p13wpucjPQ</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string-array name="FileNameCompletions">
+        <item>5G</item>
+        <item>Orientation</item>
+        <item>Stationary</item>
+        <item>Mobility</item>
+    </string-array>
+
+</resources>
